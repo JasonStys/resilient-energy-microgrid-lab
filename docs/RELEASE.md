@@ -1,0 +1,12 @@
+# Release, acceptance and rollback
+
+1. Review new code/model/data/schema/limits and notices. Run lint, types, tests, coverage, dependency audits, format and inventory checks; build UI and real portable executable.
+2. Check current Actions live artifact bytes and fresh billing meter; report separately from caches. No automatic deletion/retention changes are authorized. These workflows create no Actions artifacts/caches.
+3. Commit and push reviewed source. Require newest successful **Validation and CodeQL for that exact main SHA**, all8+2 jobs, and review open CodeQL findings separately. Never infer security from upload status alone.
+4. Dispatch Portable release with a new numeric semantic version. Preparation rejects unsafe version or missing passing workflows; it creates a **draft** with exact commit target. Three platform jobs smoke their app before uploading ZIP/checksum directly to draft. There is no automatic public publication.
+5. Download every asset into a private local acceptance folder, verify SHA-256 against adjacent checksum and GitHub asset digest, ZIP CRC/confinement and runtime notices. Execute only newly built reviewed assets, never archived unknown artifacts. Run downloaded Windows CLI/SQL/replay/HTTP checks and complete browser suite. CI provides Linux/macOS execution evidence.
+6. Record exact SHA, all workflow URLs, result counts/coverage/audits and all ZIP digests in release notes; reconfirm latest exact-SHA gates and no open findings. Publish draft, verify public assets/tag/main SHA. Close owned preview/test processes; do not terminate other user apps.
+
+Portable use is extract-and-launch, no elevation or signed installer. Retain entire `_internal`. Linux/macOS downloaded ZIP extraction may need executable permission restoration by the user; follow OS security policy, never disable protection. Artifacts target runner-tested desktop architectures, not every OS/version/mobile device.
+
+Rollback: unpublish a faulty release to draft and notify users; preserve source/history/evidence, do not rewrite public tags. Investigate and ship a new version after the full gates. No database migrations, accounts, cloud state, remote hardware or automatic updates exist to roll back. Source users can checkout a reviewed previous tag in their own clone; do not overwrite local changes. A leaked private input would require separate incident handling—not merely deleting a commit.

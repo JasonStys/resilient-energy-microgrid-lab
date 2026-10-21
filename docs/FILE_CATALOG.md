@@ -1,0 +1,65 @@
+# File catalog
+
+Every tracked-intent file; dependencies/private outputs are excluded.
+
+- `.gitattributes` — Normalize source text to LF and preserve binary screenshot assets.
+- `.github/workflows/codeql.yml` — # Security and quality analysis by Jason Stys; variables/jobs: docs/FILE_CATALOG.md.
+- `.github/workflows/release.yml` — # Draft-only portable publishing by Jason Stys. Exact-commit successful workflows gate each release.
+- `.github/workflows/validate.yml` — # Offline energy-accounting verification by Jason Stys. Matrix/contracts: docs/VALIDATION.md.
+- `.gitignore` — Exclude dependencies, runtime/private data, histories and generated builds from Git.
+- `.prettierignore` — Exclude generated indexes, locks and build/dependency trees from formatting.
+- `.prettierrc.json` — Shared readable browser/configuration/Markdown formatting options.
+- `LICENSE` — MIT License
+- `README.md` — # Resilient Energy Microgrid Lab · FIELDGRID
+- `SECURITY.md` — # Security policy
+- `docs/API.md` — # Local API and input contract
+- `docs/ARCHITECTURE.md` — # Architecture and decisions
+- `docs/MODEL.md` — # Model, units and honest interpretation
+- `docs/RELEASE.md` — # Release, acceptance and rollback
+- `docs/THIRD_PARTY.md` — # Third-party notices and provenance
+- `docs/USER_GUIDE.md` — # User guide and troubleshooting
+- `docs/VALIDATION.md` — # Validation strategy and evidence
+- `docs/images/workbench.png` — Binary screenshot asset from local application validation
+- `docs/reports/benchmark.json` — Reviewed six-scenario paired-policy summary contracts, checked across Python versions/platforms.
+- `examples/station.json` — Editable strict synthetic 48-hour station input; average W, usable Wh and explicit provenance.
+- `gridlab/__init__.py` — """Resilient Energy Microgrid Lab by Jason Stys; synthetic dispatch, not infrastructure control."""
+- `gridlab/__main__.py` — """Local energy-lab CLI by Jason Stys. Function main and argument locations: docs/CODE_INDEX.md.
+- `gridlab/dispatch.py` — """Hourly floating-point energy dispatch by Jason Stys.
+- `gridlab/engine.py` — """Independent verification, conservation gates and paired policy evidence by Jason Stys.
+- `gridlab/model.py` — """Strict hourly energy profiles by Jason Stys.
+- `gridlab/reference.py` — """Independent exact-rational dispatch oracle by Jason Stys.
+- `gridlab/reports.py` — """Inert evidence exports and optional private history by Jason Stys.
+- `gridlab/resources/history.sql` — -- Immutable local synthetic timing evidence by Jason Stys; identifiers: docs/CODE_INDEX.md.
+- `gridlab/server.py` — """Loopback-only, read-only HTTP application by Jason Stys; not an Internet server.
+- `launcher.py` — """Portable local application entry by Jason Stys; main contract: docs/CODE_INDEX.md."""
+- `licenses/PYTHON.txt` — A. HISTORY OF THE SOFTWARE
+- `package-lock.json` — Resolved npm dependency graph with download integrity values.
+- `package.json` — Pinned browser dependencies, Node version contract and build/test/audit scripts.
+- `playwright.config.ts` — /** Real three-browser microgrid-lab acceptance by Jason Stys. Fields: docs/CODE_INDEX.md. */
+- `pyproject.toml` — Python metadata, supported runtimes, strict lint/type/test and coverage gates.
+- `requirements-dev.in` — Scientific test, type, style, audit and packaging dependency inputs.
+- `requirements-dev.lock` — Universal pinned development/build graph with distribution hashes.
+- `requirements.in` — Standard-library-only Python runtime declaration (no third-party runtime packages).
+- `requirements.lock` — Empty runtime lock: this service uses only the CPython standard library.
+- `tests/test_dispatch.py` — """Analytical energy contracts and independent audit fault injection by Jason Stys. Index: docs/CODE_INDEX.md."""
+- `tests/test_model.py` — """Input boundaries and complete finite control verification by Jason Stys. Index: docs/CODE_INDEX.md."""
+- `tests/test_reports.py` — """Inert exports, immutable local SQL and CLI behavior by Jason Stys. Index: docs/CODE_INDEX.md."""
+- `tests/test_server.py` — """Real loopback routing, origin and method security by Jason Stys. Index: docs/CODE_INDEX.md."""
+- `tests/ui.spec.ts` — /** Real three-engine energy workflow and accessibility tests by Jason Stys. Index: docs/CODE_INDEX.md. */
+- `tools/benchmark.py` — """Reviewed case contracts plus informational Python resource measurement by Jason Stys.
+- `tools/package_app.py` — """Freeze and verify portable energy-lab bundles by Jason Stys. Index: docs/CODE_INDEX.md.
+- `tools/prepare_release.py` — """Fail-closed draft release preparation by Jason Stys.
+- `tools/smoke_app.py` — """Exercise a freshly reviewed frozen app by Jason Stys. Functions/variables: docs/CODE_INDEX.md."""
+- `tools/upload_release.py` — """Upload only a freshly smoke-tested native bundle to its draft by Jason Stys.
+- `tools/verify_repo.py` — """Generate/check exact-line code and file inventories by Jason Stys.
+- `tsconfig.json` — Strict TypeScript contracts for browser, unit and end-user test code.
+- `vitest.config.ts` — /** Unit-test boundary by Jason Stys; browser acceptance has its own Playwright runner. */
+- `web/contracts.test.ts` — /** Energy UI guard and unit contracts by Jason Stys; definitions/variables: docs/CODE_INDEX.md. */
+- `web/contracts.ts` — /** Bounded energy-evidence guards by Jason Stys. Functions/fields: docs/CODE_INDEX.md. */
+- `web/env.d.ts` — /** Vite static asset typing by Jason Stys; reference declarations: docs/CODE_INDEX.md. */
+- `web/index.html` — <!-- FIELDGRID microgrid instrument by Jason Stys. DOM identifiers: docs/CODE_INDEX.md. -->
+- `web/main.ts` — /** FIELDGRID energy instrument by Jason Stys; functions, state and DOM: docs/CODE_INDEX.md. */
+- `web/style.css` — /* FIELDGRID instrument design by Jason Stys; selectors/variables: docs/CODE_INDEX.md. */
+- `web/vite.config.ts` — /** Local production asset build by Jason Stys. Configuration variables: docs/CODE_INDEX.md. */
+- `docs/CODE_INDEX.md` — Generated exact-line source inventory.
+- `docs/FILE_CATALOG.md` — This generated complete file index.

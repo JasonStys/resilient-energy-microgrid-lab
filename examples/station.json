@@ -1,0 +1,402 @@
+{
+  "config": {
+    "capacity_wh": 20000,
+    "charge_eff_permille": 950,
+    "charge_limit_w": 5000,
+    "discharge_eff_permille": 900,
+    "discharge_limit_w": 5000,
+    "initial_wh": 10000,
+    "policy": 1,
+    "precharge": 0,
+    "reserve_pct": 25
+  },
+  "name": "feeder-outage",
+  "profile": [
+    {
+      "battery_available": true,
+      "critical_w": 3000,
+      "flexible_w": 1800,
+      "grid_limit_w": 8000,
+      "solar_w": 0,
+      "wind_w": 900
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3000,
+      "flexible_w": 1800,
+      "grid_limit_w": 8000,
+      "solar_w": 0,
+      "wind_w": 1500
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3000,
+      "flexible_w": 1800,
+      "grid_limit_w": 8000,
+      "solar_w": 0,
+      "wind_w": 2100
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3000,
+      "flexible_w": 1800,
+      "grid_limit_w": 8000,
+      "solar_w": 0,
+      "wind_w": 1200
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3000,
+      "flexible_w": 1800,
+      "grid_limit_w": 8000,
+      "solar_w": 0,
+      "wind_w": 600
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3000,
+      "flexible_w": 1800,
+      "grid_limit_w": 8000,
+      "solar_w": 0,
+      "wind_w": 1800
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3000,
+      "flexible_w": 1800,
+      "grid_limit_w": 8000,
+      "solar_w": 200,
+      "wind_w": 900
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3000,
+      "flexible_w": 1800,
+      "grid_limit_w": 8000,
+      "solar_w": 1000,
+      "wind_w": 1500
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3500,
+      "flexible_w": 3500,
+      "grid_limit_w": 8000,
+      "solar_w": 3000,
+      "wind_w": 2100
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3500,
+      "flexible_w": 3500,
+      "grid_limit_w": 8000,
+      "solar_w": 6000,
+      "wind_w": 1200
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3500,
+      "flexible_w": 3500,
+      "grid_limit_w": 8000,
+      "solar_w": 9000,
+      "wind_w": 600
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3500,
+      "flexible_w": 3500,
+      "grid_limit_w": 8000,
+      "solar_w": 11000,
+      "wind_w": 1800
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3500,
+      "flexible_w": 3500,
+      "grid_limit_w": 8000,
+      "solar_w": 12000,
+      "wind_w": 900
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3500,
+      "flexible_w": 3500,
+      "grid_limit_w": 8000,
+      "solar_w": 11000,
+      "wind_w": 1500
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3500,
+      "flexible_w": 3500,
+      "grid_limit_w": 8000,
+      "solar_w": 9000,
+      "wind_w": 2100
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3500,
+      "flexible_w": 3500,
+      "grid_limit_w": 8000,
+      "solar_w": 6000,
+      "wind_w": 1200
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3500,
+      "flexible_w": 3500,
+      "grid_limit_w": 0,
+      "solar_w": 3000,
+      "wind_w": 600
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3500,
+      "flexible_w": 3500,
+      "grid_limit_w": 0,
+      "solar_w": 1000,
+      "wind_w": 1800
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3000,
+      "flexible_w": 3500,
+      "grid_limit_w": 0,
+      "solar_w": 200,
+      "wind_w": 900
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3000,
+      "flexible_w": 3500,
+      "grid_limit_w": 0,
+      "solar_w": 0,
+      "wind_w": 1500
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3000,
+      "flexible_w": 1800,
+      "grid_limit_w": 0,
+      "solar_w": 0,
+      "wind_w": 2100
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3000,
+      "flexible_w": 1800,
+      "grid_limit_w": 0,
+      "solar_w": 0,
+      "wind_w": 1200
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3000,
+      "flexible_w": 1800,
+      "grid_limit_w": 0,
+      "solar_w": 0,
+      "wind_w": 600
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3000,
+      "flexible_w": 1800,
+      "grid_limit_w": 0,
+      "solar_w": 0,
+      "wind_w": 1800
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3000,
+      "flexible_w": 1800,
+      "grid_limit_w": 0,
+      "solar_w": 0,
+      "wind_w": 900
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3000,
+      "flexible_w": 1800,
+      "grid_limit_w": 0,
+      "solar_w": 0,
+      "wind_w": 1500
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3000,
+      "flexible_w": 1800,
+      "grid_limit_w": 0,
+      "solar_w": 0,
+      "wind_w": 2100
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3000,
+      "flexible_w": 1800,
+      "grid_limit_w": 0,
+      "solar_w": 0,
+      "wind_w": 1200
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3000,
+      "flexible_w": 1800,
+      "grid_limit_w": 0,
+      "solar_w": 0,
+      "wind_w": 600
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3000,
+      "flexible_w": 1800,
+      "grid_limit_w": 0,
+      "solar_w": 0,
+      "wind_w": 1800
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3000,
+      "flexible_w": 1800,
+      "grid_limit_w": 0,
+      "solar_w": 200,
+      "wind_w": 900
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3000,
+      "flexible_w": 1800,
+      "grid_limit_w": 0,
+      "solar_w": 1000,
+      "wind_w": 1500
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3500,
+      "flexible_w": 3500,
+      "grid_limit_w": 0,
+      "solar_w": 3000,
+      "wind_w": 2100
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3500,
+      "flexible_w": 3500,
+      "grid_limit_w": 0,
+      "solar_w": 6000,
+      "wind_w": 1200
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3500,
+      "flexible_w": 3500,
+      "grid_limit_w": 0,
+      "solar_w": 9000,
+      "wind_w": 600
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3500,
+      "flexible_w": 3500,
+      "grid_limit_w": 0,
+      "solar_w": 11000,
+      "wind_w": 1800
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3500,
+      "flexible_w": 3500,
+      "grid_limit_w": 8000,
+      "solar_w": 12000,
+      "wind_w": 900
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3500,
+      "flexible_w": 3500,
+      "grid_limit_w": 8000,
+      "solar_w": 11000,
+      "wind_w": 1500
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3500,
+      "flexible_w": 3500,
+      "grid_limit_w": 8000,
+      "solar_w": 9000,
+      "wind_w": 2100
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3500,
+      "flexible_w": 3500,
+      "grid_limit_w": 8000,
+      "solar_w": 6000,
+      "wind_w": 1200
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3500,
+      "flexible_w": 3500,
+      "grid_limit_w": 8000,
+      "solar_w": 3000,
+      "wind_w": 600
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3500,
+      "flexible_w": 3500,
+      "grid_limit_w": 8000,
+      "solar_w": 1000,
+      "wind_w": 1800
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3000,
+      "flexible_w": 3500,
+      "grid_limit_w": 8000,
+      "solar_w": 200,
+      "wind_w": 900
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3000,
+      "flexible_w": 3500,
+      "grid_limit_w": 8000,
+      "solar_w": 0,
+      "wind_w": 1500
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3000,
+      "flexible_w": 1800,
+      "grid_limit_w": 8000,
+      "solar_w": 0,
+      "wind_w": 2100
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3000,
+      "flexible_w": 1800,
+      "grid_limit_w": 8000,
+      "solar_w": 0,
+      "wind_w": 1200
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3000,
+      "flexible_w": 1800,
+      "grid_limit_w": 8000,
+      "solar_w": 0,
+      "wind_w": 600
+    },
+    {
+      "battery_available": true,
+      "critical_w": 3000,
+      "flexible_w": 1800,
+      "grid_limit_w": 8000,
+      "solar_w": 0,
+      "wind_w": 1800
+    }
+  ],
+  "provenance": "Invented hourly research-station profile by Jason Stys; not measured weather, facility telemetry or a forecast.",
+  "schema": 1
+}
