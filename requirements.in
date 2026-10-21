@@ -1,1 +1,1 @@
-# No third-party Python runtime dependencies; the scientific engine is compiled C++.
+# No third-party Python runtime dependencies; both energy models use the Python standard library.

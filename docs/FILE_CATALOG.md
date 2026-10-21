@@ -29,7 +29,7 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `gridlab/model.py` — """Strict hourly energy profiles by Jason Stys.
 - `gridlab/reference.py` — """Independent exact-rational dispatch oracle by Jason Stys.
 - `gridlab/reports.py` — """Inert evidence exports and optional private history by Jason Stys.
-- `gridlab/resources/history.sql` — -- Immutable local synthetic timing evidence by Jason Stys; identifiers: docs/CODE_INDEX.md.
+- `gridlab/resources/history.sql` — -- Immutable local synthetic energy evidence by Jason Stys; identifiers: docs/CODE_INDEX.md.
 - `gridlab/server.py` — """Loopback-only, read-only HTTP application by Jason Stys; not an Internet server.
 - `launcher.py` — """Portable local application entry by Jason Stys; main contract: docs/CODE_INDEX.md."""
 - `licenses/PYTHON.txt` — A. HISTORY OF THE SOFTWARE

@@ -111,6 +111,26 @@ def test_replay(tmp_path):
     assert analyze(data)["input"] == data
 
 
+def test_utf16_rejected(tmp_path):
+    """The documented UTF-8-only format must not silently auto-detect other JSON encodings."""
+    path = tmp_path / "utf16.json"
+    path.write_bytes(json.dumps(configuration(Settings())).encode("utf-16"))
+    with pytest.raises(ValueError, match="Malformed JSON"):
+        load_input(path)
+
+
+def test_maximum_profile_and_boundary_rates():
+    """The supported 168-slot boundary works with zero and unity conversion/rate edges."""
+    data = configuration(Settings())
+    data["profile"] = (data["profile"] * 4)[:168]
+    data["config"].update(
+        charge_limit_w=0, discharge_limit_w=0, charge_eff_permille=1000, discharge_eff_permille=1000
+    )
+    run = analyze(data)
+    assert len(run["selected"]["rows"]) == 168
+    assert all(row["end_wh"] == data["config"]["initial_wh"] for row in run["selected"]["rows"])
+
+
 @settings(max_examples=100, deadline=None, derandomize=True)
 @given(
     st.lists(

@@ -10,7 +10,7 @@ Browser tests exercise actual production-built UI in Chromium/Firefox/WebKit: re
 
 ## Local checkpoint
 
-Windows, Python3.14.6 / Node24.18.1: **782 Python tests passed**, **96.26% branch-inclusive coverage**, **43 browser-unit tests passed**, strict mypy passed, **30/30 real browser tests passed** (10 each in Chromium, Firefox and WebKit), including zero detected axe violations in the tested mobile state. Both dependency audits reported no known vulnerabilities. Local frozen Windows executable passed actual CLI/export/replay/SQL/notices/HTTP smoke checks. Six paired benchmark contracts passed in **0.207s**, peak **435036 bytes** tracked Python allocation for that run; not total process RSS or a cross-machine speed guarantee. Exact hosted/release results are published in release notes only after completion. No real infrastructure integration, physical uncertainty analysis or real-time performance certification was performed.
+Windows, Python3.14.6 / Node24.18.1: **784 Python tests passed**, **96.26% branch-inclusive coverage**, **43 browser-unit tests passed**, strict mypy passed, **30/30 real browser tests passed** (10 each in Chromium, Firefox and WebKit), including zero detected axe violations in the tested mobile state. Both dependency audits reported no known vulnerabilities. Local frozen Windows executable passed actual CLI/export/replay/SQL/notices/HTTP smoke checks. Six paired benchmark contracts passed in **0.207s**, peak **435036 bytes** tracked Python allocation for that run; not total process RSS or a cross-machine speed guarantee. Exact hosted/release results are published in release notes only after completion. No real infrastructure integration, physical uncertainty analysis or real-time performance certification was performed.
 
 ## Hosted matrix
 
@@ -20,7 +20,7 @@ Validation: four model jobs (Ubuntu Python3.12/3.14, Windows/macOS Python3.14), 
 
 Run README commands. `python -m tools.benchmark` checks contracts and prints informational time/allocation. `--write` deliberately regenerates baselines; inspect numerical changes, never auto-accept drift in CI. `python tools/verify_repo.py --write` regenerates exact-line/file indexes; CI checks for drift without writing. `python tools/package_app.py` builds/smokes the actual executable before ZIP creation.
 
-The first local HTTP test attempt failed in a test helper because `HTTPConnection` is not a context manager. It was corrected to explicit `contextlib.closing`; the full suite then passed without changing HTTP safeguards. No coverage exclusions, skipped platforms or relaxed security tests were added to hide this failure.
+The first local HTTP test attempt failed in a test helper because `HTTPConnection` is not a context manager. It was corrected to explicit `contextlib.closing`; the full suite then passed without changing HTTP safeguards. Review also caught automatic JSON encoding detection inconsistent with the documented UTF-8-only input; decoding is now explicit and a UTF-16 regression test rejects it. A168-slot boundary/zero-rate/unity-efficiency test was added. No coverage exclusions, skipped platforms or relaxed security tests were added to hide failures.
 
 ## Release acceptance
 

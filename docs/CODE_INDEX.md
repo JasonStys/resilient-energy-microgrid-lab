@@ -477,18 +477,25 @@ Line numbers refer to formatted source, not this generated document.
 | 105 | `parameter tmp_path` |
 | 107 | `variable data` |
 | 108 | `variable path` |
-| 137 | `definition test_generated_profiles` |
-| 138 | `parameter capacity` |
-| 138 | `parameter charge` |
-| 138 | `parameter charge_eff` |
-| 138 | `parameter discharge` |
-| 138 | `parameter discharge_eff` |
-| 138 | `parameter initial` |
-| 138 | `parameter profile` |
-| 138 | `parameter reserve` |
-| 138 | `parameter topup` |
-| 141 | `variable data` |
-| 142 | `variable row` |
+| 114 | `definition test_utf16_rejected` |
+| 114 | `parameter tmp_path` |
+| 116 | `variable path` |
+| 122 | `definition test_maximum_profile_and_boundary_rates` |
+| 124 | `variable data` |
+| 129 | `variable run` |
+| 131 | `variable row` |
+| 157 | `definition test_generated_profiles` |
+| 158 | `parameter capacity` |
+| 158 | `parameter charge` |
+| 158 | `parameter charge_eff` |
+| 158 | `parameter discharge` |
+| 158 | `parameter discharge_eff` |
+| 158 | `parameter initial` |
+| 158 | `parameter profile` |
+| 158 | `parameter reserve` |
+| 158 | `parameter topup` |
+| 161 | `variable data` |
+| 162 | `variable row` |
 
 ## tests/test_reports.py
 

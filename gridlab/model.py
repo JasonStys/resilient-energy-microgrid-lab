@@ -208,6 +208,6 @@ def load_input(path: Path) -> dict[str, Any]:
     if len(body) > 65536:
         raise ValueError("Input file too large")
     try:
-        return validate(json.loads(body, object_pairs_hook=unique_object))
+        return validate(json.loads(body.decode("utf-8"), object_pairs_hook=unique_object))
     except (UnicodeError, RecursionError, json.JSONDecodeError) as error:
         raise ValueError("Malformed JSON") from error
