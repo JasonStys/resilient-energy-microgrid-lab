@@ -56,6 +56,14 @@ export interface Run {
   };
   selected: Result;
   comparison: Result;
+  feeder_loss: {
+    input: object;
+    selected: Result;
+    comparison: Result;
+    critical_unserved_delta_wh: number;
+    flexible_unserved_delta_wh: number;
+    grid_import_reduction_wh: number;
+  };
 }
 /** Reject unsafe shapes/nonfinite values before calculations, charts, tables or download links. */
 export function parseRun(value: unknown): Run {

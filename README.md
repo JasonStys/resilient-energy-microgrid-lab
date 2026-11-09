@@ -1,5 +1,7 @@
 # Resilient Energy Microgrid Lab · FIELDGRID
 
+The [full-window feeder-loss stress workflow](docs/FEEDER_STRESS.md) reevaluates both policies with feeder availability removed, preserving all other supplied assumptions. Compare service/storage effects and download the exact derived replay input; every stressed trace retains rational-reference and energy-audit gates.
+
 An offline energy-accounting workbench by **Jason Stys**. Explore how renewable output, battery limits, feeder interruptions and critical/flexible loads interact at a fictional remote research station. Compare two transparent dispatch policies from the same starting state, inspect hourly flows, and export reproducible evidence.
 
 ![FIELDGRID browser interface](docs/images/workbench.png)

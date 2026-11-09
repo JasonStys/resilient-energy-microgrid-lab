@@ -409,6 +409,41 @@ function render(run: Run): void {
   current = run;
   evidence.hidden = false;
   const selected = run.selected.summary;
+  let stress = document.getElementById("feeder-loss");
+  if (!stress) {
+    stress = document.createElement("section");
+    stress.id = "feeder-loss";
+    stress.className = "panel";
+    evidence.append(stress);
+  }
+  stress.replaceChildren();
+  const heading = document.createElement("h2");
+  heading.textContent = "Full-window feeder-loss stress comparison";
+  const note = document.createElement("p");
+  note.textContent =
+    "Both policies are reevaluated from the same initial battery with every supplied hourly feeder limit set to zero. Other loads, renewable output, battery availability and limits stay fixed. This hypothetical stress is separate from the original hourly replay; hourly adequacy does not establish electrical safety or guaranteed survival.";
+  stress.append(heading, note);
+  for (const result of [run.feeder_loss.selected, run.feeder_loss.comparison]) {
+    const row = document.createElement("p");
+    row.textContent = `${policyName(result.policy)}: critical service ${coverage(result)}, critical unserved ${kwh(result.summary.critical_unserved_wh)} kWh, flexible unserved ${kwh(result.summary.flexible_unserved_wh)} kWh, end storage ${kwh(result.summary.end_wh)} kWh. Independent reference/energy checks: ${result.verification.reference_verified && result.verification.energy_ledgers_verified ? "passed" : "unavailable"}.`;
+    stress.append(row);
+  }
+  const delta = document.createElement("p");
+  delta.textContent = `Selected-policy changes from original: critical unserved ${kwh(run.feeder_loss.critical_unserved_delta_wh)} kWh; flexible unserved ${kwh(run.feeder_loss.flexible_unserved_delta_wh)} kWh; feeder import reduction ${kwh(run.feeder_loss.grid_import_reduction_wh)} kWh. These are profile-specific differences, not universal policy rankings.`;
+  const download = document.createElement("button");
+  download.type = "button";
+  download.textContent = "Download feeder-loss replay input";
+  download.addEventListener("click", () => {
+    const url = URL.createObjectURL(
+      new Blob([JSON.stringify(run.feeder_loss.input, null, 2)], { type: "application/json" }),
+    );
+    const anchor = document.createElement("a");
+    anchor.href = url;
+    anchor.download = "full-feeder-loss-input.json";
+    anchor.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  });
+  stress.append(delta, download);
   element("coverage").textContent = coverage(run.selected);
   element("critical-unserved").textContent = kwh(selected.critical_unserved_wh);
   element("imported").textContent = kwh(selected.grid_import_wh);

@@ -207,6 +207,18 @@ def analyze(data: dict[str, Any], settings: Settings | None = None) -> dict[str,
     other = copy.deepcopy(data)
     other["config"]["policy"] = 1 - data["config"]["policy"]
     comparison = evaluate(other)
+    disrupted = copy.deepcopy(data)
+    disrupted["name"] = "full-feeder-loss"
+    disrupted["provenance"] = (
+        "Derived synthetic full-window feeder loss; original assumptions retained except grid_limit_w=0. Not measured."
+    )
+    for slot in disrupted["profile"]:
+        slot["grid_limit_w"] = 0
+    validate(disrupted)
+    stressed = evaluate(disrupted)
+    disrupted_other = copy.deepcopy(disrupted)
+    disrupted_other["config"]["policy"] = 1 - data["config"]["policy"]
+    stressed_other = evaluate(disrupted_other)
     run: dict[str, Any] = {
         "schema": 1,
         "name": data["name"],
@@ -215,6 +227,17 @@ def analyze(data: dict[str, Any], settings: Settings | None = None) -> dict[str,
         "input": data,
         "selected": selected,
         "comparison": comparison,
+        "feeder_loss": {
+            "input": disrupted,
+            "selected": stressed,
+            "comparison": stressed_other,
+            "critical_unserved_delta_wh": stressed["summary"]["critical_unserved_wh"]
+            - selected["summary"]["critical_unserved_wh"],
+            "flexible_unserved_delta_wh": stressed["summary"]["flexible_unserved_wh"]
+            - selected["summary"]["flexible_unserved_wh"],
+            "grid_import_reduction_wh": selected["summary"]["grid_import_wh"]
+            - stressed["summary"]["grid_import_wh"],
+        },
         "method": {
             "interval_hours": 1,
             "data": "Synthetic hourly average powers; no measured weather or facility telemetry",

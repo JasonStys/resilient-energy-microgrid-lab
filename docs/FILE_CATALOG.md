@@ -14,12 +14,14 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `SECURITY.md` — # Security policy
 - `docs/API.md` — # Local API and input contract
 - `docs/ARCHITECTURE.md` — # Architecture and decisions
+- `docs/FEEDER_STRESS.md` — # Compare complete feeder loss
 - `docs/MODEL.md` — # Model, units and honest interpretation
 - `docs/RELEASE.md` — # Release, acceptance and rollback
 - `docs/THIRD_PARTY.md` — # Third-party notices and provenance
 - `docs/USER_GUIDE.md` — # User guide and troubleshooting
 - `docs/VALIDATION.md` — # Validation strategy and evidence
 - `docs/images/workbench.png` — Binary screenshot asset from local application validation
+- `docs/reports/PRACTICAL_WORKFLOWS_20261109.md` — # Full-window feeder-loss validation — 2026-11-09
 - `docs/reports/benchmark.json` — Reviewed six-scenario paired-policy summary contracts, checked across Python versions/platforms.
 - `examples/station.json` — Editable strict synthetic 48-hour station input; average W, usable Wh and explicit provenance.
 - `gridlab/__init__.py` — """Resilient Energy Microgrid Lab by Jason Stys; synthetic dispatch, not infrastructure control."""
@@ -42,6 +44,7 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `requirements.in` — Standard-library-only Python runtime declaration (no third-party runtime packages).
 - `requirements.lock` — Empty runtime lock: this service uses only the CPython standard library.
 - `tests/test_dispatch.py` — """Analytical energy contracts and independent audit fault injection by Jason Stys. Index: docs/CODE_INDEX.md."""
+- `tests/test_feeder_loss.py` — """Independent stress-profile expectations by Jason Stys.
 - `tests/test_model.py` — """Input boundaries and complete finite control verification by Jason Stys. Index: docs/CODE_INDEX.md."""
 - `tests/test_reports.py` — """Inert exports, immutable local SQL and CLI behavior by Jason Stys. Index: docs/CODE_INDEX.md."""
 - `tests/test_server.py` — """Real loopback routing, origin and method security by Jason Stys. Index: docs/CODE_INDEX.md."""
