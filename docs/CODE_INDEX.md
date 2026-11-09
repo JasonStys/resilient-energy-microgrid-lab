@@ -166,9 +166,14 @@ Line numbers refer to formatted source, not this generated document.
 | 206 | `variable selected` |
 | 207 | `variable other` |
 | 209 | `variable comparison` |
-| 210 | `variable run` |
-| 230 | `definition build_run` |
-| 230 | `parameter settings` |
+| 210 | `variable disrupted` |
+| 215 | `variable slot` |
+| 218 | `variable stressed` |
+| 219 | `variable disrupted_other` |
+| 221 | `variable stressed_other` |
+| 222 | `variable run` |
+| 253 | `definition build_run` |
+| 253 | `parameter settings` |
 
 ## gridlab/model.py
 
@@ -450,6 +455,22 @@ Line numbers refer to formatted source, not this generated document.
 | 147 | `variable before` |
 | 148 | `variable run` |
 
+## tests/test_feeder_loss.py
+
+| Line | Definition / variable / structural identifier |
+| --- | --- |
+| 13 | `definition test_one_hour_manual_feeder_loss_and_input_immutability` |
+| 15 | `variable data` |
+| 27 | `variable before` |
+| 28 | `variable run` |
+| 30 | `variable stress` |
+| 39 | `definition test_all_profiles_stress_both_policies_and_replay_input` |
+| 41 | `variable scenario` |
+| 42 | `variable run` |
+| 43 | `variable stress` |
+| 44 | `variable slot` |
+| 45 | `variable key` |
+
 ## tests/test_model.py
 
 | Line | Definition / variable / structural identifier |
@@ -568,28 +589,31 @@ Line numbers refer to formatted source, not this generated document.
 
 | Line | Definition / variable / structural identifier |
 | --- | --- |
-| 16 | `pixels` |
-| 17 | `canvas` |
-| 18 | `values` |
-| 19 | `count` |
-| 20 | `i` |
-| 32 | `before` |
-| 45 | `format` |
-| 46 | `waiting` |
-| 51 | `download` |
-| 52 | `path` |
-| 54 | `body` |
-| 56 | `run` |
-| 106 | `release` |
-| 107 | `held` |
-| 108 | `release` |
-| 110 | `entered` |
-| 111 | `started` |
-| 112 | `entered` |
-| 115 | `response` |
-| 129 | `response` |
-| 130 | `run` |
-| 147 | `results` |
+| 18 | `pending` |
+| 20 | `download` |
+| 21 | `input` |
+| 33 | `pixels` |
+| 34 | `canvas` |
+| 35 | `values` |
+| 36 | `count` |
+| 37 | `i` |
+| 49 | `before` |
+| 62 | `format` |
+| 63 | `waiting` |
+| 68 | `download` |
+| 69 | `path` |
+| 71 | `body` |
+| 73 | `run` |
+| 123 | `release` |
+| 124 | `held` |
+| 125 | `release` |
+| 127 | `entered` |
+| 128 | `started` |
+| 129 | `entered` |
+| 132 | `response` |
+| 146 | `response` |
+| 147 | `run` |
+| 164 | `results` |
 
 ## tools/benchmark.py
 
@@ -807,22 +831,29 @@ Line numbers refer to formatted source, not this generated document.
 | 55 | `provenance` |
 | 57 | `selected` |
 | 58 | `comparison` |
-| 61 | `parseRun` |
-| 62 | `r` |
-| 76 | `c` |
-| 77 | `s` |
-| 99 | `result` |
-| 125 | `keys` |
-| 145 | `nullable` |
-| 168 | `kwh` |
-| 174 | `totals` |
-| 176 | `renewable` |
-| 177 | `grid` |
-| 178 | `discharge` |
-| 179 | `charge` |
-| 180 | `critical` |
-| 181 | `flexible` |
-| 185 | `policyName` |
+| 59 | `feeder_loss` |
+| 60 | `input` |
+| 61 | `selected` |
+| 62 | `comparison` |
+| 63 | `critical_unserved_delta_wh` |
+| 64 | `flexible_unserved_delta_wh` |
+| 65 | `grid_import_reduction_wh` |
+| 69 | `parseRun` |
+| 70 | `r` |
+| 84 | `c` |
+| 85 | `s` |
+| 107 | `result` |
+| 133 | `keys` |
+| 153 | `nullable` |
+| 176 | `kwh` |
+| 182 | `totals` |
+| 184 | `renewable` |
+| 185 | `grid` |
+| 186 | `discharge` |
+| 187 | `charge` |
+| 188 | `critical` |
+| 189 | `flexible` |
+| 193 | `policyName` |
 
 ## web/env.d.ts
 
@@ -933,22 +964,32 @@ Line numbers refer to formatted source, not this generated document.
 | 408 | `render` |
 | 409 | `current` |
 | 411 | `selected` |
-| 420 | `tr` |
-| 421 | `text` |
-| 429 | `td` |
-| 438 | `first` |
-| 439 | `recovery` |
-| 448 | `a` |
-| 449 | `params` |
-| 463 | `run` |
-| 464 | `version` |
-| 465 | `current` |
-| 470 | `response` |
-| 472 | `data` |
-| 479 | `current` |
-| 489 | `run` |
-| 493 | `current` |
-| 499 | `run` |
+| 412 | `stress` |
+| 414 | `stress` |
+| 420 | `heading` |
+| 422 | `note` |
+| 426 | `result` |
+| 427 | `row` |
+| 431 | `delta` |
+| 433 | `download` |
+| 437 | `url` |
+| 440 | `anchor` |
+| 455 | `tr` |
+| 456 | `text` |
+| 464 | `td` |
+| 473 | `first` |
+| 474 | `recovery` |
+| 483 | `a` |
+| 484 | `params` |
+| 498 | `run` |
+| 499 | `version` |
+| 500 | `current` |
+| 505 | `response` |
+| 507 | `data` |
+| 514 | `current` |
+| 524 | `run` |
+| 528 | `current` |
+| 534 | `run` |
 
 ## web/style.css
 

@@ -8,6 +8,23 @@ test.beforeEach(async ({ page }) => {
   await expect(page.locator("#status")).toContainText("Verified");
 });
 
+test("feeder-loss stress downloads exact replay input without changing original replay", async ({
+  page,
+}) => {
+  await expect(page.locator("#feeder-loss")).toContainText("Both policies are reevaluated");
+  await expect(page.locator("#feeder-loss")).toContainText(
+    "Independent reference/energy checks: passed",
+  );
+  const pending = page.waitForEvent("download");
+  await page.getByRole("button", { name: "Download feeder-loss replay input" }).click();
+  const download = await pending;
+  const input = JSON.parse(await readFile((await download.path())!, "utf8"));
+  expect(input.profile).toHaveLength(48);
+  expect(input.profile.every((slot: { grid_limit_w: number }) => slot.grid_limit_w === 0)).toBe(
+    true,
+  );
+  await expect(page.locator("#showing")).toContainText("feeder-outage");
+});
 test("real model, two policies, visible chart, author and help", async ({ page }) => {
   await expect(page.locator("#comparison tr")).toHaveCount(2);
   await expect(page.locator("#identity")).toHaveText(/^[a-f0-9]{64}$/);
