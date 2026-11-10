@@ -1,5 +1,6 @@
 /** FIELDGRID energy instrument by Jason Stys; functions, state and DOM: docs/CODE_INDEX.md. */
 import "./style.css";
+import { appendReleaseVersion } from "./release-version";
 import { kwh, parseRun, policyName, totals, type Run, type Result } from "./contracts";
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = /* HTML */ ` <a
     class="skip"
@@ -532,3 +533,5 @@ form.addEventListener("change", () => {
 });
 element("hour").addEventListener("input", inspect);
 void run();
+
+appendReleaseVersion();
