@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "project": "resilient-energy-microgrid-lab",
+  "author": "Jason Stys",
+  "editionDate": "2026-11-09",
+  "sourceBaseline": "39a16658fbb68bc2558aea4bf60ab74253ef2aba",
+  "sourceUrl": "https://github.com/JasonStys/resilient-energy-microgrid-lab/tree/39a16658fbb68bc2558aea4bf60ab74253ef2aba",
+  "functionalEvidenceBaseline": "39a16658fbb68bc2558aea4bf60ab74253ef2aba",
+  "evidenceObservedAt": "2026-11-10T05:25:40.628667+00:00",
+  "workflowEvidence": [
+    {
+      "conclusion": "success",
+      "databaseId": 42753293752,
+      "event": "push",
+      "headSha": "39a16658fbb68bc2558aea4bf60ab74253ef2aba",
+      "name": "CodeQL",
+      "status": "completed",
+      "url": "https://github.com/JasonStys/resilient-energy-microgrid-lab/actions/runs/42753293752"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 42753293735,
+      "event": "push",
+      "headSha": "39a16658fbb68bc2558aea4bf60ab74253ef2aba",
+      "name": "Validation",
+      "status": "completed",
+      "url": "https://github.com/JasonStys/resilient-energy-microgrid-lab/actions/runs/42753293735"
+    }
+  ],
+  "summary": "Rehearse full-window feeder loss, compare two dispatch policies and download the derived replay input through 1.1 portable apps.",
+  "rationale": "Lets a reviewer investigate service/storage tradeoffs with the same original assumptions and independently checked energy accounting, using an extracted package rather than a development environment.",
+  "limitations": [
+    "Synthetic hourly adequacy is not power flow, protection/transient behavior, a forecast or electrical safety.",
+    "Stress removes supplied feeder availability across the whole window; it does not guarantee outage survival or optimize a real facility.",
+    "Unsigned local portable desktop packages; no system installer, native mobile application or real infrastructure controls."
+  ],
+  "documents": [
+    {
+      "filename": "project-guide.docx",
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "bytes": 88521,
+      "sha256": "d86f2b5904aa5fb7dfa49230b2c75a66694cc733b4a4a76d898614d8a7e0717c",
+      "sourceBaseline": "39a16658fbb68bc2558aea4bf60ab74253ef2aba",
+      "visualReview": {
+        "approved": true,
+        "method": "Every rendered page individually viewed at readable original resolution",
+        "pageCount": 3,
+        "renderedPageSha256": {
+          "page-1.png": "d07148d708fddbf4bacd28d01c8eb594578688c9ccfaa10bc150993ef7645ae7",
+          "page-2.png": "e8f516d559dde7e364537d2ea5190f2bc170a2e9bda2bed574fb398b68fb93cf",
+          "page-3.png": "c01912456ad641538ad62a969ff901e2fff7edf0ae1838bc429f1599115d5fe2"
+        }
+      }
+    },
+    {
+      "filename": "validation-review.docx",
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "bytes": 43628,
+      "sha256": "6c50f4de1f8e087bd6c49d54f866a48971b7c27b0a2df7ae43c9fd7969ff43df",
+      "sourceBaseline": "39a16658fbb68bc2558aea4bf60ab74253ef2aba",
+      "visualReview": {
+        "approved": true,
+        "method": "Every rendered page individually viewed at readable original resolution",
+        "pageCount": 4,
+        "renderedPageSha256": {
+          "page-1.png": "591f2d55057639a761ebbe181e0633b3ac5f88db7e3e9808edd7abe73daaae5d",
+          "page-2.png": "3006ec651812602536e7995a8dce1de82ceb342270e105b0e0d8ed879df129d8",
+          "page-3.png": "a35cc92c220c8708153091f1dba10751109f4a95c1a8efd67bf4d9220ad9383d",
+          "page-4.png": "d8e59dd81ef1a92b4780b4e196c3285f2bc836947e58c7a67992e5ecf95b0051"
+        }
+      }
+    },
+    {
+      "filename": "validation-evidence.xlsx",
+      "mimeType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "bytes": 7431,
+      "sha256": "afe1e0f4fd809739089cdf77b3216755a799ec77d8484753d0e4c0477832b4b3",
+      "sourceBaseline": "39a16658fbb68bc2558aea4bf60ab74253ef2aba",
+      "visualReview": {
+        "approved": true,
+        "tabsReviewed": ["Workflow evidence", "Test sources"],
+        "previewSha256": {
+          "workflow-evidence.png": "0a978d25890f4ae476988414bc589f6b0d3c3f616bd12e0b1409e90ef20d1109",
+          "test-sources.png": "e44f64eba789d9fdb7e50fdc409e479ee47d9219f3ba450db74d3ed2380dad31"
+        },
+        "tables": [
+          {
+            "name": "WorkflowEvidence",
+            "range": "A7:D9",
+            "autoFilter": true
+          },
+          {
+            "name": "TestSources",
+            "range": "A7:C18",
+            "autoFilter": true
+          }
+        ],
+        "formulaCount": 4,
+        "failureSensitivityReceiptPassed": true,
+        "formulaErrors": 0
+      }
+    }
+  ],
+  "scope": "Reviewed documentation editions of the cited source. Checksums identify bytes, not authorship. Historical measurements retain their own dates; integration CI must be checked separately."
+}
