@@ -46,6 +46,7 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `requirements.in` — Standard-library-only Python runtime declaration (no third-party runtime packages).
 - `requirements.lock` — Empty runtime lock: this service uses only the CPython standard library.
 - `tests/test_dispatch.py` — """Analytical energy contracts and independent audit fault injection by Jason Stys. Index: docs/CODE_INDEX.md."""
+- `tests/test_draft_lookup.py` — Independent draft/public/pagination/identity and transport-failure lookup cases.
 - `tests/test_feeder_loss.py` — """Independent stress-profile expectations by Jason Stys.
 - `tests/test_model.py` — """Input boundaries and complete finite control verification by Jason Stys. Index: docs/CODE_INDEX.md."""
 - `tests/test_package_info.py` — Frozen metadata corruption, explicit source mode and pre-bind owned-instance marker regressions.
@@ -55,6 +56,7 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `tests/test_server.py` — """Real loopback routing, origin and method security by Jason Stys. Index: docs/CODE_INDEX.md."""
 - `tests/ui.spec.ts` — /** Real three-engine energy workflow and accessibility tests by Jason Stys. Index: docs/CODE_INDEX.md. */
 - `tools/benchmark.py` — """Reviewed case contracts plus informational Python resource measurement by Jason Stys.
+- `tools/draft_lookup.py` — Complete bounded authenticated release listing, unique tag and immutable-ID draft validation.
 - `tools/legacy_smoke.py` — Preserved native domain CLI, resource, license, persistence and HTTP acceptance under active guards.
 - `tools/native_browser.mjs` — Owned Chromium context, local resource boundary, version and real-error acceptance.
 - `tools/native_feature_smoke.mjs` — Actual extracted-application new-feature UI/API/download acceptance with independent arithmetic.
