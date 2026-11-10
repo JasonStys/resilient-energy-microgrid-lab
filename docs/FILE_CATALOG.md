@@ -16,11 +16,12 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `docs/ARCHITECTURE.md` — # Architecture and decisions
 - `docs/FEEDER_STRESS.md` — # Compare complete feeder loss
 - `docs/MODEL.md` — # Model, units and honest interpretation
-- `docs/RELEASE.md` — # Release, acceptance and rollback
+- `docs/RELEASE.md` — # Portable application and release runbook
 - `docs/THIRD_PARTY.md` — # Third-party notices and provenance
 - `docs/USER_GUIDE.md` — # User guide and troubleshooting
 - `docs/VALIDATION.md` — # Validation strategy and evidence
 - `docs/images/workbench.png` — Binary screenshot asset from local application validation
+- `docs/reports/PORTABLE_RELEASE_20261109.md` — # Portable 1.1 release validation — 2026-11-09
 - `docs/reports/PRACTICAL_WORKFLOWS_20261109.md` — # Full-window feeder-loss validation — 2026-11-09
 - `docs/reports/benchmark.json` — Reviewed six-scenario paired-policy summary contracts, checked across Python versions/platforms.
 - `examples/station.json` — Editable strict synthetic 48-hour station input; average W, usable Wh and explicit provenance.
@@ -29,6 +30,7 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `gridlab/dispatch.py` — """Hourly floating-point energy dispatch by Jason Stys.
 - `gridlab/engine.py` — """Independent verification, conservation gates and paired policy evidence by Jason Stys.
 - `gridlab/model.py` — """Strict hourly energy profiles by Jason Stys.
+- `gridlab/package_info.py` — Bounded frozen release identity; source mode never borrows a packaged-source claim.
 - `gridlab/reference.py` — """Independent exact-rational dispatch oracle by Jason Stys.
 - `gridlab/reports.py` — """Inert evidence exports and optional private history by Jason Stys.
 - `gridlab/resources/history.sql` — -- Immutable local synthetic energy evidence by Jason Stys; identifiers: docs/CODE_INDEX.md.
@@ -46,14 +48,22 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `tests/test_dispatch.py` — """Analytical energy contracts and independent audit fault injection by Jason Stys. Index: docs/CODE_INDEX.md."""
 - `tests/test_feeder_loss.py` — """Independent stress-profile expectations by Jason Stys.
 - `tests/test_model.py` — """Input boundaries and complete finite control verification by Jason Stys. Index: docs/CODE_INDEX.md."""
+- `tests/test_package_info.py` — Frozen metadata corruption, explicit source mode and pre-bind owned-instance marker regressions.
+- `tests/test_portable_archive.py` — Actual archive bytes, traversal/link/type/budget/permission and extraction regression cases.
+- `tests/test_release_contract.py` — Independent negative source/version/prerequisite/draft/hash/upload authorization cases.
 - `tests/test_reports.py` — """Inert exports, immutable local SQL and CLI behavior by Jason Stys. Index: docs/CODE_INDEX.md."""
 - `tests/test_server.py` — """Real loopback routing, origin and method security by Jason Stys. Index: docs/CODE_INDEX.md."""
 - `tests/ui.spec.ts` — /** Real three-engine energy workflow and accessibility tests by Jason Stys. Index: docs/CODE_INDEX.md. */
 - `tools/benchmark.py` — """Reviewed case contracts plus informational Python resource measurement by Jason Stys.
+- `tools/legacy_smoke.py` — Preserved native domain CLI, resource, license, persistence and HTTP acceptance under active guards.
+- `tools/native_browser.mjs` — Owned Chromium context, local resource boundary, version and real-error acceptance.
+- `tools/native_feature_smoke.mjs` — Actual extracted-application new-feature UI/API/download acceptance with independent arithmetic.
 - `tools/package_app.py` — """Freeze and verify portable energy-lab bundles by Jason Stys. Index: docs/CODE_INDEX.md.
-- `tools/prepare_release.py` — """Fail-closed draft release preparation by Jason Stys.
-- `tools/smoke_app.py` — """Exercise a freshly reviewed frozen app by Jason Stys. Functions/variables: docs/CODE_INDEX.md."""
-- `tools/upload_release.py` — """Upload only a freshly smoke-tested native bundle to its draft by Jason Stys.
+- `tools/portable_archive.py` — Bounded Windows ZIP/POSIX tar creation, metadata inspection and fresh safe extraction.
+- `tools/prepare_release.py` — """Prepare only a new version/source-bound draft by Jason Stys.
+- `tools/release_contract.py` — Version/source coherence, exact-main prerequisites and immutable draft upload guards.
+- `tools/smoke_app.py` — """Actual extracted-executable CLI, HTTP and Chromium acceptance by Jason Stys.
+- `tools/upload_release.py` — """Upload one inspected source/version archive pair by Jason Stys.
 - `tools/verify_repo.py` — """Generate/check exact-line code and file inventories by Jason Stys.
 - `tsconfig.json` — Strict TypeScript contracts for browser, unit and end-user test code.
 - `vitest.config.ts` — /** Unit-test boundary by Jason Stys; browser acceptance has its own Playwright runner. */
@@ -62,7 +72,8 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `web/env.d.ts` — /** Vite static asset typing by Jason Stys; reference declarations: docs/CODE_INDEX.md. */
 - `web/index.html` — <!-- FIELDGRID microgrid instrument by Jason Stys. DOM identifiers: docs/CODE_INDEX.md. -->
 - `web/main.ts` — /** FIELDGRID energy instrument by Jason Stys; functions, state and DOM: docs/CODE_INDEX.md. */
+- `web/release-version.ts` — Canonical bundled application version rendered from package.json without remote lookup.
 - `web/style.css` — /* FIELDGRID instrument design by Jason Stys; selectors/variables: docs/CODE_INDEX.md. */
-- `web/vite.config.ts` — /** Local production asset build by Jason Stys. Configuration variables: docs/CODE_INDEX.md. */
+- `web/vite.config.ts` — /** Canonical local asset/release build by Jason Stys; symbols: docs/CODE_INDEX.md. */
 - `docs/CODE_INDEX.md` — Generated exact-line source inventory.
 - `docs/FILE_CATALOG.md` — This generated complete file index.

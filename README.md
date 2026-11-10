@@ -8,7 +8,7 @@ An offline energy-accounting workbench by **Jason Stys**. Explore how renewable 
 
 ## Use it
 
-Download the ZIP for your OS from [Releases](https://github.com/JasonStys/resilient-energy-microgrid-lab/releases), verify its adjacent SHA-256 file, and extract the **entire** archive. Launch `ResilientEnergyMicrogridLab` (Windows: `.exe`) to open the local browser UI. No Python/Node installation, admin rights, account, cloud service or Docker is required for the portable app. Quit with Ctrl+C in its console. Unsigned software may trigger OS warnings; verify the source/checksum and do not bypass your organization's controls. Desktop Windows x64, Linux x64 and macOS arm64 are the release targets, not universal binaries or mobile installers.
+Download the Windows ZIP or Linux/macOS `.tar.gz` for your OS from [Releases](https://github.com/JasonStys/resilient-energy-microgrid-lab/releases), verify its adjacent SHA-256 file, and extract the **entire** archive. Launch `ResilientEnergyMicrogridLab` (Windows: `.exe`) to open the local browser UI. No Python/Node installation, admin rights, account, cloud service or Docker is required for the portable app. Quit with Ctrl+C in its console. Unsigned software may trigger OS warnings; verify the source/checksum and do not bypass your organization's controls. Desktop Windows x64, Linux x64 and macOS arm64 are the release targets, not universal binaries or mobile installers.
 
 Source setup with Python 3.12–3.14 and Node 24:
 
@@ -70,3 +70,16 @@ Main files: `gridlab/model.py` validates and builds profiles; `dispatch.py` allo
 Synthetic civilian education only: no real telemetry, electrical control, power-flow solver, protection model, forecasts, battery certification, site calibration, reliability guarantee or optimal scheduling. Hourly energy adequacy does **not** establish electrical safety. Not affiliated with or endorsed by a government agency, employer, laboratory or equipment vendor.
 
 Created by [Jason Stys](https://github.com/JasonStys). [Questions/issues](https://github.com/JasonStys/resilient-energy-microgrid-lab/issues) · [LinkedIn](https://www.linkedin.com/in/jason-stys-31b30b351/). MIT license; retain bundled runtime notices.
+
+## Portable release identity
+
+The 1.1 release contract keeps the software version consistent across Python, npm, the
+running service and the UI. Versioned archives include `RELEASE.json` with source commit,
+platform and clean/dirty build status. Packaging tests the **freshly extracted** application,
+including its new practical workflow, from an unrelated temporary working directory.
+Windows uses ZIP; Linux/macOS use `.tar.gz` to preserve required native links and permissions.
+Published 1.0 assets remain unchanged. Check the selected release's source and version rather
+than assuming an older download contains current source improvements. See the
+[portable operation and release guide](docs/RELEASE.md).
+
+Observed local packaging checks and boundaries: [portable1.1 validation](docs/reports/PORTABLE_RELEASE_20261109.md).
