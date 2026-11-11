@@ -1,0 +1,72 @@
+{
+  "schema": 1,
+  "repository": "resilient-energy-microgrid-lab",
+  "runtimeVersion": "1.1.0",
+  "runtimeSource": "39a16658fbb68bc2558aea4bf60ab74253ef2aba",
+  "createdAt": "2026-11-10T23:53:15.859Z",
+  "author": "Jason Stys",
+  "document": "windows-application-guide.docx",
+  "sha256": "4d05c24569b605f78121200680f153b62bf12c4f1c4578cf7ee9c868ec6206c4",
+  "screenshots": [
+    {
+      "file": "01-feeder-loss.png",
+      "sha256": "2f6e6523bc79070181d2adb6b0e0dcda47b4817d49374a16995c1bf09f6c1d59",
+      "width": 1266,
+      "height": 381,
+      "caption": "Actual installed application showing full-window feeder loss. Captured during the accepted native user journey with prepared synthetic inputs."
+    },
+    {
+      "file": "02-alternative-policy.png",
+      "sha256": "810dae3322f0378d9179b2eed5a7bce86e8bb88b382fce2dabb35427c3b04ace",
+      "width": 1266,
+      "height": 381,
+      "caption": "Actual installed application showing alternate dispatch policy under same loss. Captured during the accepted native user journey with prepared synthetic inputs."
+    }
+  ],
+  "snippets": [
+    {
+      "file": "gridlab/engine.py",
+      "first": 205,
+      "last": 221,
+      "sha256": "42e2c531f776061228c5fa87560faedcd3ef53c417d3df8682ce8926867305f0",
+      "url": "https://github.com/JasonStys/resilient-energy-microgrid-lab/blob/39a16658fbb68bc2558aea4bf60ab74253ef2aba/gridlab/engine.py#L205"
+    }
+  ],
+  "observedTests": [
+    {
+      "name": "Published package",
+      "observed": "Exact public release, provider/sidecar hashes and installed resources verified; installed bytes unchanged.",
+      "result": "Passed"
+    },
+    {
+      "name": "Actual native core",
+      "observed": "The existing packaged CLI/API and native feature acceptance helper passed on the installed executable.",
+      "result": "Passed"
+    },
+    {
+      "name": "Scenario evidence",
+      "observed": "The 48-row derived feeder-loss input retained its original configuration. Both policies imported zero grid energy, and independent energy ledgers agreed.",
+      "result": "Passed"
+    },
+    {
+      "name": "UI and cleanup",
+      "observed": "Actual compiled-application browser journey passed. Both images were individually inspected; cleanup left no owned child process.",
+      "result": "Passed"
+    }
+  ],
+  "visualReview": {
+    "approved": true,
+    "pageCount": 4,
+    "reviewedAt": "2026-11-11T01:39:02.224228+00:00",
+    "reviewers": ["root"],
+    "method": "Every page individually viewed at original resolution; unchanged previously reviewed pages retained only after exact SHA-256 match.",
+    "pageSHA256": {
+      "1": "7c03d77653106f2f92a0a6af7759e9fa427bd94253a15e6aef3521dfcefab997",
+      "2": "da987884a644ce2a6a62d7cdebb9ea67a767e412ea38fd2fc0bef0a79cfba536",
+      "3": "1a9615ccf23fec201a6b0ab9a3e566b3ebf60d4e4bf7d0f674c4b5af5cbd024f",
+      "4": "c6dcf5dda08c462e086351c7200a5933373b64ba7b535700b3e1e87b9aaa186b"
+    },
+    "ooxmlSchema": "passed",
+    "issues": []
+  }
+}
