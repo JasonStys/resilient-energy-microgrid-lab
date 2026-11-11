@@ -26,10 +26,15 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `docs/reports/PRACTICAL_WORKFLOWS_20261109.md` — # Full-window feeder-loss validation — 2026-11-09
 - `docs/reports/benchmark.json` — Reviewed six-scenario paired-policy summary contracts, checked across Python versions/platforms.
 - `docs/reports/documentation-refresh-2026-11-09.md` — # Documentation refresh — 2026-11-09
+- `docs/reports/installed-windows-2026-11-10.md` — # Installed Windows application validation — 10 November 2026
 - `docs/reports/project-guide.docx` — Reviewed Word project guide bound to the documented source revision.
 - `docs/reports/publications.json` — Exact Office publication byte identities, approved page/tab scopes and immutable source baselines.
 - `docs/reports/validation-evidence.xlsx` — Reviewed Excel workflow and test-source Tables with recalculated outcome formulas.
 - `docs/reports/validation-review.docx` — Reviewed Word validation evidence and explicit test/analysis limitations.
+- `docs/reports/windows-application-guide.docx` — Individually reviewed installed-app guide with real screenshots, worked workflow, source excerpts and operating limits.
+- `docs/reports/windows-application-guide.json` — Exact illustrated-guide, screenshot and rendered-page identities plus bounded validation observations.
+- `docs/screenshots/windows-application/01-feeder-loss.png` — Binary screenshot asset from local application validation
+- `docs/screenshots/windows-application/02-alternative-policy.png` — Binary screenshot asset from local application validation
 - `examples/station.json` — Editable strict synthetic 48-hour station input; average W, usable Wh and explicit provenance.
 - `gridlab/__init__.py` — """Resilient Energy Microgrid Lab by Jason Stys; synthetic dispatch, not infrastructure control."""
 - `gridlab/__main__.py` — """Local energy-lab CLI by Jason Stys. Function main and argument locations: docs/CODE_INDEX.md.
